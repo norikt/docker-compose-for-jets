@@ -1,4 +1,4 @@
-# docker-compose-for-rails-new
+# docker-compose-for-jets
 
 Usage
 --------
