@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:alpine
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    build: .
+    command: bundle exec jets server --host 0.0.0.0
+    volumes:
+      - .:/myapp
+    ports:
+      - "8888:8888"
+    depends_on:
+      - db
